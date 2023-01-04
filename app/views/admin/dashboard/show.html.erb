@@ -1,2 +1,10 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<section class="admin-dashboard">
+<header class="page-header">
+  <h1>Admin Dashboard</h1>
+</header>
+
+<p> There are currently <%= @product_count %> different items in stock that have been broken down into <%= @category_count %> categories. </p>
+
+<%= link_to 'All Products', [:admin, :products], class: 'btn btn-info' %>
+
+</section>
