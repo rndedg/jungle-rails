@@ -41,6 +41,14 @@
             <% end %>
           <%# </ul>
         </li> %>
+        <li class="nav-link">
+        <% if current_user %>
+            Signed in as <%= current_user.email %> | <%= link_to "Logout", :logout, class:  "text-danger" %>
+          <% else %>
+          
+            <%= link_to 'Login', :login, class: "text-danger"  %> |
+            <%= link_to 'Signup', :signup, class: "text-danger"  %>
+          <% end %>
       </ul>
       <ul class="navbar-nav">
         <li><%= link_to 'About', :about_index, class: "nav-link" %></li>
