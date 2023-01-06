@@ -1,10 +1,32 @@
-<h1>Login</h1>
-</br>
+<section class="new-users-session">
 
-<%= form_tag '/login' do %>
+  <header class="page-header">
+    <h1>Login</h1>
+  </header>
 
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
+  <div class="well">
+    <%= link_to 'Home', [:root], class: 'btn btn-primary' %>
+    <br>
+  </div>
 
-<% end %>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-1">
+      <%= form_for :login do |form| %>
+        
+        <div class="form-group">
+          <%= form.label :email %>
+          <%= form.text_field :email, class: 'form-control'  %>
+        </div>
+        <br>
+
+        <div class="form-group">
+        <%= form.label :password %>
+        <%= form.password_field :password, class: 'form-control'  %>
+      </div>
+      <br>
+        <%= form.submit 'Login', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+
+</section>
